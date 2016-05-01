@@ -3,4 +3,5 @@
 *.xcscmblueprint
 xcuserdata
 Carthage/
+Pods/
 .rubygems
