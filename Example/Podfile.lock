@@ -1,0 +1,20 @@
+PODS:
+  - Nimble (3.2.0)
+  - Outlets (0.1.0)
+  - Quick (0.9.2)
+
+DEPENDENCIES:
+  - Nimble
+  - Outlets (from `../`)
+  - Quick
+
+EXTERNAL SOURCES:
+  Outlets:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
+  Outlets: 35ca6748e542c69393076db74a99e50b65a1b336
+  Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
+
+COCOAPODS: 0.39.0

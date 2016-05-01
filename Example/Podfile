@@ -1,0 +1,12 @@
+use_frameworks!
+
+target 'OutletsExample', :exclusive => true do
+  pod 'Outlets', :path => '../'
+end
+
+target 'OutletsExampleTests', :exclusive => true do
+  pod 'Outlets', :path => '../'
+
+  pod 'Quick'
+  pod 'Nimble'
+end
