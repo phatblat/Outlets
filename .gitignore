@@ -1,0 +1,5 @@
+.DS_Store
+*.xccheckout
+*.xcscmblueprint
+xcuserdata
+Carthage/
