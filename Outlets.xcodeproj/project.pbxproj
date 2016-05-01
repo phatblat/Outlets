@@ -10,6 +10,9 @@
 		F8325C2C1CD67E78001189AF /* Outlets.h in Headers */ = {isa = PBXBuildFile; fileRef = F8325C2B1CD67E78001189AF /* Outlets.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8325C331CD67E78001189AF /* Outlets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8325C281CD67E77001189AF /* Outlets.framework */; };
 		F8325C381CD67E78001189AF /* OutletsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8325C371CD67E78001189AF /* OutletsTests.swift */; };
+		F8325C431CD67FDB001189AF /* Outlet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8325C421CD67FDB001189AF /* Outlet.swift */; };
+		F8325C451CD67FEC001189AF /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8325C441CD67FEC001189AF /* Action.swift */; };
+		F8325C471CD6813D001189AF /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8325C461CD6813D001189AF /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		F8325C321CD67E78001189AF /* OutletsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OutletsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8325C371CD67E78001189AF /* OutletsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutletsTests.swift; sourceTree = "<group>"; };
 		F8325C391CD67E78001189AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8325C421CD67FDB001189AF /* Outlet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Outlet.swift; sourceTree = "<group>"; };
+		F8325C441CD67FEC001189AF /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		F8325C461CD6813D001189AF /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,9 @@
 			children = (
 				F8325C2B1CD67E78001189AF /* Outlets.h */,
 				F8325C2D1CD67E78001189AF /* Info.plist */,
+				F8325C421CD67FDB001189AF /* Outlet.swift */,
+				F8325C441CD67FEC001189AF /* Action.swift */,
+				F8325C461CD6813D001189AF /* Common.swift */,
 			);
 			path = Outlets;
 			sourceTree = "<group>";
@@ -194,6 +203,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8325C431CD67FDB001189AF /* Outlet.swift in Sources */,
+				F8325C471CD6813D001189AF /* Common.swift in Sources */,
+				F8325C451CD67FEC001189AF /* Action.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +322,7 @@
 		F8325C3D1CD67E78001189AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -320,12 +333,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = at.phatbl.Outlets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		F8325C3E1CD67E78001189AF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -378,6 +393,7 @@
 				F8325C3E1CD67E78001189AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F8325C3F1CD67E78001189AF /* Build configuration list for PBXNativeTarget "OutletsTests" */ = {
 			isa = XCConfigurationList;
@@ -386,6 +402,7 @@
 				F8325C411CD67E78001189AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
