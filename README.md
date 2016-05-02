@@ -1,6 +1,6 @@
 # Outlets
 
-[![CI Status](http://img.shields.io/travis/Ben Chatelain/Outlets.svg?style=flat)](https://travis-ci.org/phatblat/Outlets)
+[![Build Status](https://travis-ci.org/phatblat/Outlets.svg?branch=master)](https://travis-ci.org/phatblat/Outlets)
 [![Version](https://img.shields.io/cocoapods/v/Outlets.svg?style=flat)](http://cocoapods.org/pods/Outlets)
 [![License](https://img.shields.io/cocoapods/l/Outlets.svg?style=flat)](http://cocoapods.org/pods/Outlets)
 [![Platform](https://img.shields.io/cocoapods/p/Outlets.svg?style=flat)](http://cocoapods.org/pods/Outlets)
