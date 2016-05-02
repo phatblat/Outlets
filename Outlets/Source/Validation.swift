@@ -1,5 +1,5 @@
 //
-//  Common.swift
+//  Validation.swift
 //  Outlets
 //
 //  Created by Ben Chatelain on 5/1/16.

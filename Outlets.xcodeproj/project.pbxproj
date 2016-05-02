@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B585CE051CD7EAFF001A701E /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B585CE041CD7EAFF001A701E /* Validation.swift */; };
 		F8325C331CD67E78001189AF /* Outlets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8325C281CD67E77001189AF /* Outlets.framework */; };
 		F8325C381CD67E78001189AF /* OutletsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8325C371CD67E78001189AF /* OutletsTests.swift */; };
 		F8325C511CD688E7001189AF /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8325C4E1CD688E7001189AF /* Action.swift */; };
-		F8325C521CD688E7001189AF /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8325C4F1CD688E7001189AF /* Common.swift */; };
 		F8325C531CD688E7001189AF /* Outlet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8325C501CD688E7001189AF /* Outlet.swift */; };
 		F8325C551CD68915001189AF /* Outlets.h in Headers */ = {isa = PBXBuildFile; fileRef = F8325C541CD68915001189AF /* Outlets.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -26,13 +26,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B585CE041CD7EAFF001A701E /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		F8325C281CD67E77001189AF /* Outlets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Outlets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8325C2D1CD67E78001189AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8325C321CD67E78001189AF /* OutletsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OutletsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8325C371CD67E78001189AF /* OutletsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutletsTests.swift; sourceTree = "<group>"; };
 		F8325C391CD67E78001189AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8325C4E1CD688E7001189AF /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
-		F8325C4F1CD688E7001189AF /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		F8325C501CD688E7001189AF /* Outlet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Outlet.swift; sourceTree = "<group>"; };
 		F8325C541CD68915001189AF /* Outlets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Outlets.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,9 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				F8325C4E1CD688E7001189AF /* Action.swift */,
-				F8325C4F1CD688E7001189AF /* Common.swift */,
 				F8325C501CD688E7001189AF /* Outlet.swift */,
 				F8325C541CD68915001189AF /* Outlets.h */,
+				B585CE041CD7EAFF001A701E /* Validation.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -213,7 +213,7 @@
 			files = (
 				F8325C531CD688E7001189AF /* Outlet.swift in Sources */,
 				F8325C511CD688E7001189AF /* Action.swift in Sources */,
-				F8325C521CD688E7001189AF /* Common.swift in Sources */,
+				B585CE051CD7EAFF001A701E /* Validation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
