@@ -12,8 +12,6 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		AFC9DD4E73578491F87D7A8D /* Pods_OutletsExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 427912CD8A305E1A63AFAAAF /* Pods_OutletsExampleTests.framework */; };
-		F8325C581CD68AAD001189AF /* LICENSE.md in Sources */ = {isa = PBXBuildFile; fileRef = F8325C561CD68AAD001189AF /* LICENSE.md */; };
-		F8325C591CD68AAD001189AF /* Outlets.podspec in Resources */ = {isa = PBXBuildFile; fileRef = F8325C571CD68AAD001189AF /* Outlets.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -246,7 +244,6 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
-				F8325C591CD68AAD001189AF /* Outlets.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +354,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8325C581CD68AAD001189AF /* LICENSE.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
