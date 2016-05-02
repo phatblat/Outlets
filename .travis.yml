@@ -7,12 +7,14 @@ language: objective-c
 # cache: cocoapods
 # podfile: Example/Podfile
 before_install:
-- bundle install
-- bundle exec pod install --project-directory=Example
+  - bundle install
+  - bundle exec pod install --project-directory=Example
 env:
   matrix:
     - TASK=carthage
     - TASK=xcodebuild
     - TASK=podlint
 script:
-- bundle exec rake ci:$TASK
+  - bundle exec rake ci:$TASK
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
