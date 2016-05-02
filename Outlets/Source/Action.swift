@@ -72,10 +72,6 @@ public func action(viewController: UIViewController) -> (String, from: String) -
             }
         }
 
-//        expect(target) === viewController
-//        expect(action).toNot(beNil())
-//        if let action = action {
-//            expect(action) == expectedAction
-//        }
+        validate(target: target, action: action, expectedAction: expectedAction)
     }
 }
