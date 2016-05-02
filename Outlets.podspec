@@ -23,7 +23,7 @@ project demonstrates how they work.
                        DESC
 
   s.homepage         = 'https://github.com/phatblat/Outlets'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.screenshots      = 'http://phatbl.at/images/outlet-action-tests-pass.png'
   s.license          = 'MIT'
   s.author           = { 'Ben Chatelain' => 'ben@octop.ad' }
   s.source           = { :git => 'https://github.com/phatblat/Outlets.git', :tag => s.version.to_s }
