@@ -15,6 +15,14 @@ import Nimble
 
 class ViewControllerSpec: QuickSpec {
 	override func spec() {
+        setupFailHandler { message in
+            if let message = message {
+                fail(message)
+            } else {
+                fail()
+            }
+        }
+
 		var viewController: UIViewController!
 
 		var hasBarButtonItemOutlet: BarButtonItemOutletAssertion!
@@ -26,6 +34,14 @@ class ViewControllerSpec: QuickSpec {
 				viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ViewController")
 				viewController.loadView()
 				expect(viewController.view).toNot(beNil())
+
+                setupActionValidator { target, action, expectedAction in
+                    expect(target) === viewController
+                    expect(action).toNot(beNil())
+                    if let action = action {
+                        expect(action) == expectedAction
+                    }
+                }
 
 				// Capture the new viewController instance for each test
 				hasBarButtonItemOutlet = outlet(viewController)
