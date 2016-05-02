@@ -58,10 +58,13 @@ typealias ImageOutletAssertion = String -> UIImageView?
 ///            - parameter outlet: Name of outlet to look up.
 ///
 ///            - returns: Object bound to `outlet` if found; nil otherwise.
+///
+/// - note: Does not need an explicit call to test framework fail as runtime will catch exception:
+///         Assertions: failed: caught "NSUnknownKeyException", "[<OutletsExample.ViewController 0x7fa400c47750> valueForUndefinedKey:]: this class is not key value coding-compliant for the key leftButton1."
 func outlet(viewController: UIViewController) -> (String) -> AnyObject? {
     return { (outlet: String) -> AnyObject? in
         guard let object = viewController.valueForKey(outlet)
-            else { fail("\(outlet) outlet was nil"); return nil }
+            else { return nil }
 
         return object
     }
