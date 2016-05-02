@@ -12,6 +12,9 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		AFC9DD4E73578491F87D7A8D /* Pods_OutletsExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 427912CD8A305E1A63AFAAAF /* Pods_OutletsExampleTests.framework */; };
+		F8BDCC021CD6F262005F046D /* ViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BDCC011CD6F262005F046D /* ViewControllerSpec.swift */; };
+		F8BDCC031CD6F364005F046D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
+		F8BDCC041CD6F366005F046D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,8 @@
 		D81CEE5D1BF8B8AF2632EA62 /* Pods-OutletsExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OutletsExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OutletsExampleTests/Pods-OutletsExampleTests.release.xcconfig"; sourceTree = "<group>"; };
 		F8325C561CD68AAD001189AF /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = LICENSE.md; path = ../LICENSE.md; sourceTree = "<group>"; };
 		F8325C571CD68AAD001189AF /* Outlets.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Outlets.podspec; path = ../Outlets.podspec; sourceTree = "<group>"; };
+		F8BDCC001CD6F262005F046D /* OutletsExampleTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OutletsExampleTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		F8BDCC011CD6F262005F046D /* ViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerSpec.swift; sourceTree = "<group>"; };
 		FE9906746990F4D8DB18B3E8 /* Pods_OutletsExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OutletsExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -111,7 +116,9 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				F8BDCC001CD6F262005F046D /* OutletsExampleTests-Bridging-Header.h */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
+				F8BDCC011CD6F262005F046D /* ViewControllerSpec.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -204,9 +211,9 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = CocoaPods;
+				ORGANIZATIONNAME = "Ben Chatelain";
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -354,6 +361,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8BDCC041CD6F366005F046D /* ViewController.swift in Sources */,
+				F8BDCC031CD6F364005F046D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,6 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8BDCC021CD6F262005F046D /* ViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,7 +493,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OutletsExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MODULE_NAME = OutletsExample;
 				PRODUCT_BUNDLE_IDENTIFIER = at.phatbl.OutletsExample;
 				PRODUCT_NAME = OutletsExample;
 			};
@@ -496,7 +505,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OutletsExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MODULE_NAME = OutletsExample;
 				PRODUCT_BUNDLE_IDENTIFIER = at.phatbl.OutletsExample;
 				PRODUCT_NAME = OutletsExample;
 			};
@@ -506,6 +514,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 26DC0BABF37FC62263F71D9A /* Pods-OutletsExampleTests.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -518,6 +527,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "at.phatbl.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = OutletsExampleTests;
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/OutletsExampleTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OutletsExample.app/OutletsExample";
 			};
 			name = Debug;
 		};
@@ -525,6 +537,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D81CEE5D1BF8B8AF2632EA62 /* Pods-OutletsExampleTests.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -533,6 +546,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "at.phatbl.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = OutletsExampleTests;
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/OutletsExampleTests-Bridging-Header.h";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OutletsExample.app/OutletsExample";
 			};
 			name = Release;
 		};
