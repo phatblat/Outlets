@@ -1,7 +1,8 @@
 .DS_Store
+.rubygems
+Pods/
+Example/Podfile.lock
+Carthage/
 *.xccheckout
 *.xcscmblueprint
 xcuserdata
-Carthage/
-Pods/
-.rubygems
