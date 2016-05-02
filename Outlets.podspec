@@ -26,7 +26,7 @@ project demonstrates how they work.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = 'MIT'
   s.author           = { 'Ben Chatelain' => 'ben@octop.ad' }
-  s.source           = { :git => 'https://github.com/Outlets/Outlets.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/phatblat/Outlets.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/phatblat'
 
   s.ios.deployment_target = '8.0'
