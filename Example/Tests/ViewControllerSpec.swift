@@ -15,6 +15,14 @@ import Nimble
 
 class ViewControllerSpec: QuickSpec {
 	override func spec() {
+        setupFailHandler { message in
+            if let message = message {
+                fail(message)
+            } else {
+                fail()
+            }
+        }
+
 		var viewController: UIViewController!
 
 		var hasBarButtonItemOutlet: BarButtonItemOutletAssertion!
