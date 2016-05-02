@@ -9,16 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
+	@IBOutlet var leftButton: UIBarButtonItem!
+	@IBOutlet var rightButton: UIBarButtonItem!
+	@IBOutlet var segmentedControl: UISegmentedControl!
+}
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+// MARK: - IBAction Methods
+extension ViewController {
+	@IBAction func didTapLeftButton(button: UIBarButtonItem) {
+		print("didTapLeftButton:")
+	}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+	@IBAction func didTapRightButton(button: UIBarButtonItem) {
+		print("didTapRightButton:")
+	}
 
+	@IBAction func segmentedControlValueDidChange(segmentedControl: UISegmentedControl) {
+		print("segmentedControlValueDidChange:")
+	}
 }
 

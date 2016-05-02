@@ -9,6 +9,7 @@
 import Foundation
 
 @testable import OutletsExample
+import Outlets
 import Quick
 import Nimble
 

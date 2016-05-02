@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="TMu-Xc-1gg">
             <objects>
-                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hwK-aH-KsZ" customClass="ViewController" customModule="OutletActionAssertion" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hwK-aH-KsZ" customClass="ViewController" customModule="OutletsExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hhW-A3-Rq2"/>
                         <viewControllerLayoutGuide type="bottom" id="zXO-LU-m7w"/>

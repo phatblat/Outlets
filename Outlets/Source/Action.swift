@@ -31,7 +31,7 @@ import UIKit
 typealias FullActionAssertion = (UIViewController) -> (String, from: String) -> Void
 
 /// Asserts that the  `from` outlet.
-typealias ActionAssertion = (String, from: String) -> Void
+public typealias ActionAssertion = (String, from: String) -> Void
 
 /// Asserts that `viewController` contains an action invoked from a known outlet.
 /// The Nimble `expect` function is used for validation and `fail` is called if
@@ -46,7 +46,7 @@ typealias ActionAssertion = (String, from: String) -> Void
 ///            - parameter expectedOutlet: Name of outlet to look up.
 ///
 ///            - returns: Object bound to `outlet` if found; nil otherwise.
-func action(viewController: UIViewController) -> (String, from: String) -> Void {
+public func action(viewController: UIViewController) -> (String, from: String) -> Void {
     return { (expectedAction: String, expectedOutlet: String) in
         let optionalControl = outlet(viewController)(expectedOutlet)
 

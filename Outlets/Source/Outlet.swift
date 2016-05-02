@@ -37,10 +37,10 @@ typealias AnyOutletAssertion = String -> AnyObject?
 typealias ButtonOutletAssertion = String -> UIButton?
 
 /// Asserts that the named outlet is bound to a `UIBarButtonItem`.
-typealias BarButtonItemOutletAssertion = String -> UIBarButtonItem?
+public typealias BarButtonItemOutletAssertion = String -> UIBarButtonItem?
 
 /// Asserts that the named outlet is bound to a `UISegmentedControl`.
-typealias SegmentedControlOutletAssertion = String -> UISegmentedControl?
+public typealias SegmentedControlOutletAssertion = String -> UISegmentedControl?
 
 /// Asserts that the named outlet is bound to a `UILabel`.
 typealias LabelOutletAssertion = String -> UILabel?
@@ -77,7 +77,7 @@ func outlet(viewController: UIViewController) -> (String) -> AnyObject? {
 ///            - parameter outlet: Name of outlet to look up.
 ///
 ///            - returns: Object bound to `outlet` if found; nil otherwise.
-func outlet<T>(viewController: UIViewController) -> (String) -> T? {
+public func outlet<T>(viewController: UIViewController) -> (String) -> T? {
     return { (expectedOutlet: String) -> T? in
         guard let object = outlet(viewController)(expectedOutlet)
             else { return nil }
