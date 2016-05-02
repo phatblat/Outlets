@@ -6,8 +6,8 @@
 [![Build Status](https://travis-ci.org/phatblat/Outlets.svg?branch=master)](https://travis-ci.org/phatblat/Outlets)
 [![codecov](https://codecov.io/gh/phatblat/Outlets/branch/master/graph/badge.svg)](https://codecov.io/gh/phatblat/Outlets)
 
-Outlets provides a set of functions to make validating that `IBOutlets` are
-connected between your Storyboard/XIB file and view controller properties. It
+Outlets provides a set of functions which validate that `IBOutlets` are
+correctly connected between your Storyboard/XIB file and view controller properties. It
 can also validate that `IBAction` methods are connected correctly as well.
 
 For an explanation of the approach and how these assertions work see
