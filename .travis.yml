@@ -9,6 +9,10 @@ language: objective-c
 before_install:
 - bundle install
 - bundle exec pod install --project-directory=Example
+env:
+  matrix:
+    - TASK=carthage
+    - TASK=xcodebuild
+    - TASK=podlint
 script:
-- set -o pipefail && xcodebuild test -workspace Example/OutletsExample.xcworkspace -scheme OutletsExample -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
-- bundle exec pod lib lint --allow-warnings
+- bundle exec rake ci:$TASK
