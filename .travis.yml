@@ -10,4 +10,4 @@ before_install:
 - bundle exec pod install --project-directory=Example
 script:
 - set -o pipefail && xcodebuild test -workspace Example/OutletsExample.xcworkspace -scheme OutletsExample -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
-- bundle exec pod lib lint
+- bundle exec pod lib lint --allow-warnings
