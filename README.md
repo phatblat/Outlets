@@ -6,16 +6,44 @@
 [![Build Status](https://travis-ci.org/phatblat/Outlets.svg?branch=master)](https://travis-ci.org/phatblat/Outlets)
 [![codecov](https://codecov.io/gh/phatblat/Outlets/branch/master/graph/badge.svg)](https://codecov.io/gh/phatblat/Outlets)
 
+_Utility functions for validating `IBOutlet` and `IBAction` connections._
+
+# About
+
 Outlets provides a set of functions which validate that `IBOutlets` are
 correctly connected between your Storyboard/XIB file and view controller properties. It
 can also validate that `IBAction` methods are connected correctly as well.
 
-For an explanation of the approach and how these assertions work see
-[Testing IBOutlets and IBActions With Curried Functions in Swift](http://phatbl.at/2016/04/29/testing-iboutlets-and-ibactions-with-curried-functions-in-swift.html)
+> This micro-library is based on the following post:
+> [Testing IBOutlets and IBActions With Curried Functions in Swift](http://phatbl.at/2016/04/29/testing-iboutlets-and-ibactions-with-curried-functions-in-swift.html)
+
+
+## Requirements
+
+- Xcode 7.3+
+- Swift 2.2+
+- iOS 8.0+
+
+## Installation
+
+### [CocoaPods](http://cocoapods.org) (recommended)
+
+```ruby
+use_frameworks!
+pod 'Outlets'
+```
+
+### [Carthage](https://github.com/Carthage/Carthage)
+
+```
+github "phatblat/Outlets"
+```
 
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+## Getting Started
 
 Here is an example of using Outlets with Quick and Nimble:
 
@@ -82,24 +110,10 @@ class ViewControllerSpec: QuickSpec {
 }
 ```
 
-## Requirements
-
-- Xcode 7.3+
-- CocoaPods 0.39+
-
-## Installation
-
-Outlets is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod "Outlets"
-```
-
 ## Author
 
 Ben Chatelain, [@phatblat](https://twitter.com/phatblat)
 
 ## License
 
-This repo is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for rights and limitations.
+`Outlets` is released under the [MIT License](http://opensource.org/licenses/MIT). See the [LICENSE](LICENSE.md) file for details.
