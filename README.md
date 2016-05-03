@@ -43,6 +43,8 @@ github "phatblat/Outlets"
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+Or run `pod try Outlets` from the command line.
+
 ## Getting Started
 
 Here is an example of using Outlets with Quick and Nimble:
