@@ -9,9 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-	@IBOutlet var leftButton: UIBarButtonItem!
-	@IBOutlet var rightButton: UIBarButtonItem!
-	@IBOutlet var segmentedControl: UISegmentedControl!
+	@IBOutlet private var leftButton: UIBarButtonItem!
+	@IBOutlet private var rightButton: UIBarButtonItem!
+	@IBOutlet private var segmentedControl: UISegmentedControl!
 }
 
 // MARK: - IBAction Methods
