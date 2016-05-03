@@ -10,8 +10,8 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Outlets provides a set of functions to make validating that `IBOutlets` are
-connected between your Storyboard/XIB file and view controller properties. It
+Outlets provides a set of functions which validate that `IBOutlets` are
+correctly connected between your Storyboard/XIB file and view controller properties. It
 can also validate that `IBAction` methods are connected correctly as well.
 
 For an explanation of the approach and how these assertions work see
