@@ -32,8 +32,10 @@ can also validate that `IBAction` methods are connected correctly as well.
 ### [CocoaPods](http://cocoapods.org) (recommended)
 
 ```ruby
-use_frameworks!
-pod 'Outlets'
+target 'AppTests' do
+  use_frameworks!
+  pod 'Outlets'
+end
 ```
 
 ### [Carthage](https://github.com/Carthage/Carthage)
@@ -121,4 +123,4 @@ Ben Chatelain, [@phatblat](https://twitter.com/phatblat)
 
 ## License
 
-`Outlets` is released under the [MIT License](http://opensource.org/licenses/MIT). See the [LICENSE](LICENSE.md) file for details.
+Outlets is released under the [MIT License](http://opensource.org/licenses/MIT). See the [LICENSE](LICENSE.md) file for details.
