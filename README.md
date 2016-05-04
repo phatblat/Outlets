@@ -1,12 +1,15 @@
+![Outlets logo](http://phatbl.at/images/outlets-logo.png "Outlets logo showing electrical sockets from various contries")
+
 # Outlets
+
+_Utility functions for validating `IBOutlet` and `IBAction` connections._
 
 [![Version](https://img.shields.io/cocoapods/v/Outlets.svg?style=flat)](http://cocoapods.org/pods/Outlets)
 [![License](https://img.shields.io/cocoapods/l/Outlets.svg?style=flat)](http://cocoapods.org/pods/Outlets)
+[![Language Swift 2](https://img.shields.io/badge/Language-Swift%202-orange.svg)](https://developer.apple.com/swift)
 [![Platform](https://img.shields.io/cocoapods/p/Outlets.svg?style=flat)](http://cocoapods.org/pods/Outlets)
 [![Build Status](https://travis-ci.org/phatblat/Outlets.svg?branch=master)](https://travis-ci.org/phatblat/Outlets)
 [![codecov](https://codecov.io/gh/phatblat/Outlets/branch/master/graph/badge.svg)](https://codecov.io/gh/phatblat/Outlets)
-
-_Utility functions for validating `IBOutlet` and `IBAction` connections._
 
 # About
 
@@ -29,8 +32,10 @@ can also validate that `IBAction` methods are connected correctly as well.
 ### [CocoaPods](http://cocoapods.org) (recommended)
 
 ```ruby
-use_frameworks!
-pod 'Outlets'
+target 'AppTests' do
+  use_frameworks!
+  pod 'Outlets'
+end
 ```
 
 ### [Carthage](https://github.com/Carthage/Carthage)
@@ -118,4 +123,4 @@ Ben Chatelain, [@phatblat](https://twitter.com/phatblat)
 
 ## License
 
-`Outlets` is released under the [MIT License](http://opensource.org/licenses/MIT). See the [LICENSE](LICENSE.md) file for details.
+Outlets is released under the [MIT License](http://opensource.org/licenses/MIT). See the [LICENSE](LICENSE.md) file for details.
