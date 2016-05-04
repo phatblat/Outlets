@@ -1,5 +1,3 @@
-<p align="center">
-
 ![Outlets logo](http://phatbl.at/images/outlets-logo.png "Outlets logo showing electrical sockets from various contries")
 
 # Outlets
@@ -11,8 +9,6 @@ _Utility functions for validating `IBOutlet` and `IBAction` connections._
 [![Platform](https://img.shields.io/cocoapods/p/Outlets.svg?style=flat)](http://cocoapods.org/pods/Outlets)
 [![Build Status](https://travis-ci.org/phatblat/Outlets.svg?branch=master)](https://travis-ci.org/phatblat/Outlets)
 [![codecov](https://codecov.io/gh/phatblat/Outlets/branch/master/graph/badge.svg)](https://codecov.io/gh/phatblat/Outlets)
-
-</p>
 
 # About
 
