@@ -8,6 +8,7 @@ _Utility functions for validating `IBOutlet` and `IBAction` connections._
 [![License](https://img.shields.io/cocoapods/l/Outlets.svg?style=flat)](http://cocoapods.org/pods/Outlets)
 [![Language Swift 2](https://img.shields.io/badge/Language-Swift%202-orange.svg)](https://developer.apple.com/swift)
 [![Platform](https://img.shields.io/cocoapods/p/Outlets.svg?style=flat)](http://cocoapods.org/pods/Outlets)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Build Status](https://travis-ci.org/phatblat/Outlets.svg?branch=master)](https://travis-ci.org/phatblat/Outlets)
 [![codecov](https://codecov.io/gh/phatblat/Outlets/branch/master/graph/badge.svg)](https://codecov.io/gh/phatblat/Outlets)
 
