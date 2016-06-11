@@ -20,6 +20,6 @@ namespace "ci" do
 
   desc "Lints the CocoaPod"
   task :podlint do |t|
-    run "bundle exec pod lib lint --allow-warnings"
+    run "bundle exec pod lib lint"
   end
 end
