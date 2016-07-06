@@ -57,7 +57,7 @@ public func action(_ viewController: UIViewController) -> (String, from: String)
             switch control {
             case let button as UIBarButtonItem:
                 target = button.target
-                action = button.action.description
+                action = button.action?.description
             case let control as UIControl:
                 target = control.allTargets().first!
                 var allActions: [String] = []
