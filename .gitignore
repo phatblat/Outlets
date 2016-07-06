@@ -6,3 +6,4 @@ Carthage/
 *.xccheckout
 *.xcscmblueprint
 xcuserdata
+bin
