@@ -31,22 +31,22 @@ import UIKit
 private typealias FullOutletTest = (UIViewController) -> (String) -> AnyObject?
 
 /// Asserts that the named outlet is bound, but does not care about the type of object.
-typealias AnyOutletAssertion = String -> AnyObject?
+typealias AnyOutletAssertion = (String) -> AnyObject?
 
 /// Asserts that the named outlet is bound to a `UIButton`.
-typealias ButtonOutletAssertion = String -> UIButton?
+typealias ButtonOutletAssertion = (String) -> UIButton?
 
 /// Asserts that the named outlet is bound to a `UIBarButtonItem`.
-public typealias BarButtonItemOutletAssertion = String -> UIBarButtonItem?
+public typealias BarButtonItemOutletAssertion = (String) -> UIBarButtonItem?
 
 /// Asserts that the named outlet is bound to a `UISegmentedControl`.
-public typealias SegmentedControlOutletAssertion = String -> UISegmentedControl?
+public typealias SegmentedControlOutletAssertion = (String) -> UISegmentedControl?
 
 /// Asserts that the named outlet is bound to a `UILabel`.
-typealias LabelOutletAssertion = String -> UILabel?
+typealias LabelOutletAssertion = (String) -> UILabel?
 
 /// Asserts that the named outlet is bound to a `UIImageView`.
-typealias ImageOutletAssertion = String -> UIImageView?
+typealias ImageOutletAssertion = (String) -> UIImageView?
 
 /// Asserts that `viewController` has an outlet with matching name. The Nimble
 /// `fail` function is called if outlet is not found.
@@ -61,9 +61,9 @@ typealias ImageOutletAssertion = String -> UIImageView?
 ///
 /// - note: Does not need an explicit call to test framework fail as runtime will catch exception:
 ///         Assertions: failed: caught "NSUnknownKeyException", "[<OutletsExample.ViewController 0x7fa400c47750> valueForUndefinedKey:]: this class is not key value coding-compliant for the key leftButton1."
-func outlet(viewController: UIViewController) -> (String) -> AnyObject? {
+func outlet(_ viewController: UIViewController) -> (String) -> AnyObject? {
     return { (outlet: String) -> AnyObject? in
-        guard let object = viewController.valueForKey(outlet)
+        guard let object = viewController.value(forKey: outlet)
             else { return nil }
 
         return object
@@ -80,7 +80,7 @@ func outlet(viewController: UIViewController) -> (String) -> AnyObject? {
 ///            - parameter outlet: Name of outlet to look up.
 ///
 ///            - returns: Object bound to `outlet` if found; nil otherwise.
-public func outlet<T>(viewController: UIViewController) -> (String) -> T? {
+public func outlet<T>(_ viewController: UIViewController) -> (String) -> T? {
     return { (expectedOutlet: String) -> T? in
         guard let object = outlet(viewController)(expectedOutlet)
             else { return nil }

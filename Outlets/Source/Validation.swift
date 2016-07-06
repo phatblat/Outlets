@@ -10,7 +10,7 @@
 
 /// Closure called when a test has failed. Used to map to testing framework's
 /// fail function.
-public typealias FailHandler = String? -> Void
+public typealias FailHandler = (String?) -> Void
 
 private var failHandler: FailHandler?
 
@@ -27,7 +27,7 @@ private var failHandler: FailHandler?
 ///     }
 ///
 /// - parameter handler: Optional `FailHandler` to handle failures.
-public func setupFailHandler(handler: FailHandler?) {
+public func setupFailHandler(_ handler: FailHandler?) {
     failHandler = handler
 }
 
@@ -36,7 +36,7 @@ public func setupFailHandler(handler: FailHandler?) {
 /// any knowledge or dependencies in this framework.
 ///
 /// - parameter message: Optional description of failure.
-func fail(message: String?) {
+func fail(_ message: String?) {
     guard let handler = failHandler else { print("ERROR: failHandler has not been set up."); return }
     handler(message)
 }
@@ -63,7 +63,7 @@ private var actionValidator: ActionValidation?
 ///         used in your tests. If you reinitialize this for each text/example method (e.g. in
 ///         `setUp` or `beforeEach`) you will need to call `setupActionValidator` again with
 ///         the new instance.
-public func setupActionValidator(validator: ActionValidation?) {
+public func setupActionValidator(_ validator: ActionValidation?) {
     actionValidator = validator
 }
 
@@ -72,7 +72,7 @@ public func setupActionValidator(validator: ActionValidation?) {
 /// - parameter target:         Target of the action, expected to be the given view controller.
 /// - parameter action:         Action found (will be nil if not found).
 /// - parameter expectedAction: String name of expected action.
-func validate(target target: AnyObject?, action: String?, expectedAction: String) {
+func validate(target: AnyObject?, action: String?, expectedAction: String) {
     guard let validator = actionValidator else { print("ERROR: actionValidator has not been set up."); return }
     validator(target: target, action: action, expectedAction: expectedAction)
 }

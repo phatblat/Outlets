@@ -46,7 +46,7 @@ public typealias ActionAssertion = (String, from: String) -> Void
 ///            - parameter expectedOutlet: Name of outlet to look up.
 ///
 ///            - returns: Object bound to `outlet` if found; nil otherwise.
-public func action(viewController: UIViewController) -> (String, from: String) -> Void {
+public func action(_ viewController: UIViewController) -> (String, from: String) -> Void {
     return { (expectedAction: String, expectedOutlet: String) in
         let optionalControl = outlet(viewController)(expectedOutlet)
 
@@ -61,8 +61,8 @@ public func action(viewController: UIViewController) -> (String, from: String) -
             case let control as UIControl:
                 target = control.allTargets().first!
                 var allActions: [String] = []
-                for event: UIControlEvents in [.TouchUpInside, .ValueChanged] {
-                    allActions += control.actionsForTarget(target!, forControlEvent: event) ?? []
+                for event: UIControlEvents in [.touchUpInside, .valueChanged] {
+                    allActions += control.actions(forTarget: target!, forControlEvent: event) ?? []
                 }
 
                 // Filter down to the expected action
