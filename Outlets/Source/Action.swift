@@ -59,7 +59,7 @@ public func action(_ viewController: UIViewController) -> (String, from: String)
                 target = button.target
                 action = button.action?.description
             case let control as UIControl:
-                target = control.allTargets().first!
+                target = control.allTargets.first!
                 var allActions: [String] = []
                 for event: UIControlEvents in [.touchUpInside, .valueChanged] {
                     allActions += control.actions(forTarget: target!, forControlEvent: event) ?? []
