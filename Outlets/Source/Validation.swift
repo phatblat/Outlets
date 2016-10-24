@@ -42,7 +42,7 @@ func fail(_ message: String?) {
 }
 
 // MARK: - Action Validation
-public typealias ActionValidation = (target: AnyObject?, action: String?, expectedAction: String) -> Void
+public typealias ActionValidation = (_ target: Any?, _ action: String?, _ expectedAction: String) -> Void
 
 private var actionValidator: ActionValidation?
 
@@ -72,7 +72,7 @@ public func setupActionValidator(_ validator: ActionValidation?) {
 /// - parameter target:         Target of the action, expected to be the given view controller.
 /// - parameter action:         Action found (will be nil if not found).
 /// - parameter expectedAction: String name of expected action.
-func validate(target: AnyObject?, action: String?, expectedAction: String) {
+func validate(target: Any?, action: String?, expectedAction: String) {
     guard let validator = actionValidator else { print("ERROR: actionValidator has not been set up."); return }
-    validator(target: target, action: action, expectedAction: expectedAction)
+    validator(target, action, expectedAction)
 }
