@@ -217,9 +217,11 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0830;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0830;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -495,6 +497,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = at.phatbl.OutletsExample;
 				PRODUCT_NAME = OutletsExample;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -507,6 +510,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = at.phatbl.OutletsExample;
 				PRODUCT_NAME = OutletsExample;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -526,6 +530,7 @@
 				PRODUCT_NAME = OutletsExampleTests;
 				SWIFT_OBJC_BRIDGING_HEADER = "Tests/OutletsExampleTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OutletsExample.app/OutletsExample";
 			};
 			name = Debug;
@@ -541,6 +546,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "at.phatbl.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = OutletsExampleTests;
 				SWIFT_OBJC_BRIDGING_HEADER = "Tests/OutletsExampleTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OutletsExample.app/OutletsExample";
 			};
 			name = Release;

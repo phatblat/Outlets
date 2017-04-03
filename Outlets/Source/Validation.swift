@@ -72,7 +72,7 @@ public func setupActionValidator(_ validator: ActionValidation?) {
 /// - parameter target:         Target of the action, expected to be the given view controller.
 /// - parameter action:         Action found (will be nil if not found).
 /// - parameter expectedAction: String name of expected action.
-func validate(target: Any?, action: String?, expectedAction: String) {
+func validate(_ target: Any?, action: String?, expectedAction: String) {
     guard let validator = actionValidator else { print("ERROR: actionValidator has not been set up."); return }
     validator(target, action, expectedAction)
 }

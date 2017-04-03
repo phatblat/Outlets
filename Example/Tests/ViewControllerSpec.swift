@@ -31,7 +31,7 @@ class ViewControllerSpec: QuickSpec {
 
 		describe("view controller") {
 			beforeEach {
-				viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ViewController")
+                viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController")
 				viewController.loadView()
 				expect(viewController.view).toNot(beNil())
 
@@ -62,13 +62,13 @@ class ViewControllerSpec: QuickSpec {
 
 			// MARK: - Actions
 			it("receives a didTapLeftButton: action from leftButton") {
-				receivesAction("didTapLeftButton:", from: "leftButton")
+				receivesAction("didTapLeftButton:", "leftButton")
 			}
 			it("receives a didTapRightButton: action from rightButton") {
-				receivesAction("didTapRightButton:", from: "rightButton")
+				receivesAction("didTapRightButton:", "rightButton")
 			}
 			it("receives a segmentedControlValueDidChange: action from segmentedControl") {
-				receivesAction("segmentedControlValueDidChange:", from: "segmentedControl")
+				receivesAction("segmentedControlValueDidChange:", "segmentedControl")
 			}
 		}
 	}

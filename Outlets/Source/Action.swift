@@ -72,6 +72,6 @@ public func action(_ viewController: UIViewController) -> (String, _ from: Strin
             }
         }
 
-        validate(target: target, action: action, expectedAction: expectedAction)
+        validate(target, action: action, expectedAction: expectedAction)
     }
 }
