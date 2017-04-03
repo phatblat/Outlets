@@ -51,13 +51,13 @@ class ViewControllerSpec: QuickSpec {
 
 			// MARK: - Outlets
 			it("has a leftButton outlet") {
-				hasBarButtonItemOutlet("leftButton")
+				_ = hasBarButtonItemOutlet("leftButton")
 			}
 			it("has a rightButton outlet") {
-				hasBarButtonItemOutlet("rightButton")
+				_ = hasBarButtonItemOutlet("rightButton")
 			}
 			it("has a segmentedControl outlet") {
-				hasSegmentedControlOutlet("segmentedControl")
+				_ = hasSegmentedControlOutlet("segmentedControl")
 			}
 
 			// MARK: - Actions
