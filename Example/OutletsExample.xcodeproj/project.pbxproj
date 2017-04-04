@@ -498,7 +498,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 544764B8DFF3472DB3E8E858 /* Pods-OutletsExample.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MTGSZH8QM4;
 				INFOPLIST_FILE = OutletsExample/Info.plist;
@@ -513,7 +512,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C859811AE05A247E55EEC36B /* Pods-OutletsExample.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MTGSZH8QM4;
 				INFOPLIST_FILE = OutletsExample/Info.plist;
@@ -528,7 +526,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C34503E5C205F1ED76D7DC0B /* Pods-OutletsExampleTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -550,7 +547,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2B653E52269D3BE67798E162 /* Pods-OutletsExampleTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Tests/Info.plist;
