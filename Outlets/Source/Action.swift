@@ -61,12 +61,12 @@ public func action(_ viewController: UIViewController) -> (String, _ from: Strin
             case let control as UIControl:
                 target = control.allTargets.first!
                 var allActions: [String] = []
-                for event: UIControlEvents in [.touchUpInside, .valueChanged] {
+                for event: UIControl.Event in [.touchUpInside, .valueChanged] {
                     allActions += control.actions(forTarget: target!, forControlEvent: event) ?? []
                 }
 
                 // Filter down to the expected action
-                action = allActions.filter({$0 == expectedAction}).first
+                action = allActions.filter{$0 == expectedAction}.first
             default:
                 fail("Unhandled control type: \(type(of: control))")
             }

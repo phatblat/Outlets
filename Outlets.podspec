@@ -1,3 +1,8 @@
+#
+# Outlets.podspec
+# Outlets
+#
+
 Pod::Spec.new do |s|
   s.name             = 'Outlets'
   s.version          = '0.1.0'
@@ -26,10 +31,12 @@ project demonstrates how they work.
   s.screenshots      = 'http://phatbl.at/images/outlet-action-tests-pass.png'
   s.license          = 'MIT'
   s.author           = { 'Ben Chatelain' => 'ben@octop.ad' }
-  s.source           = { :git => 'https://github.com/phatblat/Outlets.git', :tag => s.version.to_s }
+  s.source           = { git: 'https://github.com/phatblat/Outlets.git', tag: s.version.to_s }
   s.social_media_url = 'https://twitter.com/phatblat'
 
   s.ios.deployment_target = '8.0'
+  # s.ios.deployment_target = '12.1'
+  s.swift_version = "5.1"
 
   s.source_files = 'Outlets/Source/**/*'
 
