@@ -15,7 +15,7 @@ namespace "ci" do
 
   desc "Builds and tests the OutletsExample project using xcodebuild"
   task :xcodebuild do |t|
-    run "set -o pipefail && xcodebuild test -workspace Example/OutletsExample.xcworkspace -scheme OutletsExample -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6s,OS=latest' ONLY_ACTIVE_ARCH=NO | xcpretty"
+    run "set -o pipefail && xcodebuild test -workspace Example/OutletsExample.xcworkspace -scheme OutletsExample -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 11,OS=latest' ONLY_ACTIVE_ARCH=NO | xcpretty"
   end
 
   desc "Lints the CocoaPod"
