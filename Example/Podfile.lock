@@ -1,0 +1,27 @@
+PODS:
+  - Nimble (8.0.5)
+  - Outlets (0.1.0)
+  - Quick (2.2.0)
+
+DEPENDENCIES:
+  - Nimble
+  - Outlets (from `../`)
+  - Quick
+
+SPEC REPOS:
+  trunk:
+    - Nimble
+    - Quick
+
+EXTERNAL SOURCES:
+  Outlets:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Nimble: 4ab1aeb9b45553c75b9687196b0fa0713170a332
+  Outlets: a0b6ca144bcee81b1ce0da02e7d905f5e5425ba1
+  Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
+
+PODFILE CHECKSUM: 3f3275226fe32a78f75a20a88d5ccdf1ca351dcf
+
+COCOAPODS: 1.9.0

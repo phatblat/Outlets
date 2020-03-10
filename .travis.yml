@@ -1,20 +1,42 @@
-# references:
-# * http://www.objc.io/issue-6/travis-ci.html
-# * https://github.com/supermarin/xcpretty#usage
+#
+# .travis.yml
+# Outlets
+#
+# https://travis-ci.com/mas-cli/mas
+# https://docs.travis-ci.com/user/reference/osx/
+# https://docs.travis-ci.com/user/languages/objective-c/
+# http://www.objc.io/issue-6/travis-ci.html
+# https://github.com/supermarin/xcpretty#usage
+#
 
-osx_image: xcode7.3
-language: objective-c
-# cache: cocoapods
-# podfile: Example/Podfile
-before_install:
-  - bundle install
-  - bundle exec pod install --project-directory=Example
+# https://docs.travis-ci.com/user/build-config-validation
+version: ~> 1.0
+
+# https://docs.travis-ci.com/user/reference/osx/#macos-version
+os: osx
+osx_image: xcode11.3        # macOS 10.14
+
 env:
+  global:
+    - LANG=en_US.UTF-8
+    - LC_ALL=en_US.UTF-8
+    - LANGUAGE=en_US.UTF-8
   matrix:
     - TASK=carthage
     - TASK=xcodebuild
     - TASK=podlint
+
+# Bundler 2
+# https://docs.travis-ci.com/user/languages/ruby/#bundler-20
+before_install:
+  - gem install bundler
+  - bundle install
+
+install:
+  - bundle exec pod install --project-directory=Example
+
 script:
   - bundle exec rake ci:$TASK
+
 after_success:
   - bash <(curl -s https://codecov.io/bash)

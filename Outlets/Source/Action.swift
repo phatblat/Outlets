@@ -28,10 +28,10 @@ import UIKit
 
 // MARK: - Actions
 /// Full signature of the `action` curried function.
-typealias FullActionAssertion = (UIViewController) -> (String, from: String) -> Void
+typealias FullActionAssertion = (UIViewController) -> (String, _ from: String) -> Void
 
 /// Asserts that the  `from` outlet.
-public typealias ActionAssertion = (String, from: String) -> Void
+public typealias ActionAssertion = (String, _ from: String) -> Void
 
 /// Asserts that `viewController` contains an action invoked from a known outlet.
 /// The Nimble `expect` function is used for validation and `fail` is called if
@@ -46,32 +46,32 @@ public typealias ActionAssertion = (String, from: String) -> Void
 ///            - parameter expectedOutlet: Name of outlet to look up.
 ///
 ///            - returns: Object bound to `outlet` if found; nil otherwise.
-public func action(viewController: UIViewController) -> (String, from: String) -> Void {
+public func action(_ viewController: UIViewController) -> (String, _ from: String) -> Void {
     return { (expectedAction: String, expectedOutlet: String) in
         let optionalControl = outlet(viewController)(expectedOutlet)
 
-        var target: AnyObject?
+        var target: Any?
         var action: String?
 
         if let control = optionalControl {
             switch control {
             case let button as UIBarButtonItem:
                 target = button.target
-                action = button.action.description
+                action = button.action?.description
             case let control as UIControl:
-                target = control.allTargets().first!
+                target = control.allTargets.first!
                 var allActions: [String] = []
-                for event: UIControlEvents in [.TouchUpInside, .ValueChanged] {
-                    allActions += control.actionsForTarget(target!, forControlEvent: event) ?? []
+                for event: UIControl.Event in [.touchUpInside, .valueChanged] {
+                    allActions += control.actions(forTarget: target!, forControlEvent: event) ?? []
                 }
 
                 // Filter down to the expected action
-                action = allActions.filter({$0 == expectedAction}).first
+                action = allActions.filter{$0 == expectedAction}.first
             default:
-                fail("Unhandled control type: \(control.dynamicType)")
+                fail("Unhandled control type: \(type(of: control))")
             }
         }
 
-        validate(target: target, action: action, expectedAction: expectedAction)
+        validate(target, action: action, expectedAction: expectedAction)
     }
 }

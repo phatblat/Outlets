@@ -1,12 +1,16 @@
+platform :ios, '8.0'
+
+workspace 'OutletsExample'
+
 use_frameworks!
+inhibit_all_warnings!
 
-target 'OutletsExample', :exclusive => true do
-  pod 'Outlets', :path => '../'
-end
+target 'OutletsExample' do
+  pod 'Outlets', path: '../', inhibit_warnings: false
 
-target 'OutletsExampleTests', :exclusive => true do
-  pod 'Outlets', :path => '../'
-
-  pod 'Quick'
-  pod 'Nimble'
+  target 'OutletsExampleTests' do
+    inherit! :search_paths
+    pod 'Quick'
+    pod 'Nimble'
+  end
 end
